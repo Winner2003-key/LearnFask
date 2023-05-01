@@ -10,3 +10,8 @@ def hello_world():
 @app.route("/<name>")
 def hello_name(name):
     return f"Hello, {escape(name)}"
+
+@app.route('/user/<username>')
+def show_user_profile(username):
+    # show the user profile for that user
+    return f'User {escape(username)}'
